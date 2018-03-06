@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block main %}
 		<div class="content-body">
 			<div class="container">
 				<div class="row">
 					<main class="col-md-12">
-						<h1 class="page-title">About Me</h1>
+						<h1 class="page-title">{{ article.title }}</h1>
 						<article class="post">
 							<div class="entry-content clearfix">
 								<figure class="img-responsive-center">
-									<img class="img-responsive" src="img/me.jpg" alt="Developer Image">
+									<img class="img-responsive" src="{% static 'img/me.jpg' %}" alt="Developer Image">
 								</figure>
-								<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
-								<p>Responsive web design offers us a way forward, finally allowing us to design for the ebb and flow of things. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+								{{ article.content }}
 								<div class="height-40px"></div>
 								<h2 class="title text-center">Social</h2>
 								<ul class="social">
@@ -53,14 +53,5 @@
 			</div>
 		</div>		
 		
-		<footer id="site-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="copyright">&copy; 2014 ThemeWagon.com</p>
-					</div>
-				</div>
-			</div>
-		</footer>
 
 {% endblock main %}

@@ -23,7 +23,7 @@
                     <div class="entry-content clearfix">
                         <p>{{ article.desc }}</p>
                         <div class="read-more cl-effect-14">
-                            <a href=" article.get_absolute_url " class="more-link">继续阅读 <span class="meta-nav">→</span></a>
+                            <a href="{% url 'detail' article.id %}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
                         </div>
                     </div>
                 </article>
@@ -50,6 +50,7 @@
                         <li><a href="">11</a></li>
                     </ul>
                 </div>
+				
             </main>
             <aside class="col-md-4">
                 <div class="widget widget-recent-posts">
