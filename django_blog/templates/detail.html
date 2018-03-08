@@ -12,29 +12,23 @@
 								<figure class="img-responsive-center">
 									<img class="img-responsive" src="{% static 'img/me.jpg' %}" alt="Developer Image">
 								</figure>
-								{{ article.content }}
-								<div class="height-40px"></div>
-								<h2 class="title text-center">Social</h2>
-								<ul class="social">
-									<li class="facebook"><a href="#"><span class="ion-social-facebook"></span></a></li>
-									<li class="twitter"><a href="#"><span class="ion-social-twitter"></span></a></li>
-									<li class="google-plus"><a href="#"><span class="ion-social-googleplus"></span></a></li>
-									<li class="tumblr"><a href="#"><span class="ion-social-tumblr"></span></a></li>
-								</ul>
-							</div>
+								{{ article.content|safe }}
 						</article>
 					</main>
 				</div>
 			</div>
 		</div>
+
+
 		
 		<div class="content-body">
 			<div class="container">
 				<div class="row">
 					<main class="col-md-12">
-						<h1 class="page-title">Contact</h1>
+						<h1 class="page-title">发表评论</h1>
 						<article class="post">
 							<div class="entry-content clearfix">
+
 								<form action="#" method="post" class="contact-form">
 									<div class="row">
 										<div class="col-md-6 col-md-offset-3">
@@ -42,16 +36,46 @@
 											<input type="email" name="email" placeholder="Email" required>
 											<input type="text" name="subject" placeholder="Subject" required>
 											<textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-											<button class="btn-send btn-5 btn-5b ion-ios-paperplane"><span>Drop Me a Line</span></button>
+											<button class="btn-send"><span>提交</span></button>
 										</div>
-									</div>	<!-- row -->
+									</div>
 								</form>
+
+								<br>
+								<br>
+								<br>
+								<br>
+								<div class="comment-body">
+									<p>xingming</p>
+									<p>email</p>
+									<br>
+									<p>有评论后再去后台删除文章会出错</p>
+								</div>
+								  <footer class="comment-footer flex-left">
+									<ul class="unit list-inline dot-divider">
+									  <li class="list-inline-item">
+										<time class="text-small text-muted">57 分钟前</time>
+									  </li>
+									  <li class="list-inline-item">
+										<a href="/comments/reply/2334"
+										   class="reply-btn text-small text-muted">回复</a>
+									  </li>
+									</ul>
+								  </footer>
+								</div>
+							<hr/>
+
+
 							</div>
 						</article>
 					</main>
 				</div>
 			</div>
 		</div>		
-		
+
+
+
+
+
 
 {% endblock main %}
