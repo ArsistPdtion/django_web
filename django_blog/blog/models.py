@@ -29,11 +29,16 @@ class Article(models.Model):
     author = models.ForeignKey(User,verbose_name='作者')
     tags = models.ManyToManyField(Tag,verbose_name='标签',blank=True)
     category = models.ForeignKey(Category,verbose_name='分类')
+    ##增加文章阅读次数统计
+    view_num = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title
 
-
+    #增加文章阅读数的方法
+    def increase_view_num(self):
+        self.view_num += 1
+        self.save(update_fields=['view_num'])
 
 
 
